@@ -1,4 +1,4 @@
-package implementation.bronze.quiz_10870;
+package bronze.implementation.quiz_10870;
 
 import java.io.BufferedReader;
 import java.io.IOException;
