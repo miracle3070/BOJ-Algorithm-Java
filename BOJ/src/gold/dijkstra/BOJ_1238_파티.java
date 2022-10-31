@@ -48,12 +48,12 @@ public class BOJ_1238_파티 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
-		nodeCnt = Integer.parseInt(st.nextToken());
-		edgeCnt = Integer.parseInt(st.nextToken());
+		nodeCnt = Integer.parseInt(st.nextToken()); // 학생 수를 입력받는다. (정점의 개수)
+		edgeCnt = Integer.parseInt(st.nextToken()); // 길(단방향)의 개수 (간선의 개수)
 		int dest = Integer.parseInt(st.nextToken());
 		graph = new ArrayList[nodeCnt + 1];
-		goDistance = new int[nodeCnt + 1];
-		backDistance = new int[nodeCnt + 1];
+		goDistance = new int[nodeCnt + 1]; // X까지 가는 최단거리 테이블
+		backDistance = new int[nodeCnt + 1]; // X에서 돌아오는 최단거리 테이블
 
 		for (int i = 1; i <= nodeCnt; i++)
 			graph[i] = new ArrayList<>();
@@ -113,7 +113,7 @@ public class BOJ_1238_파티 {
 		if (start == end)
 			return -1;
 
-		int[] distance = new int[nodeCnt + 1];
+		int[] distance = new int[nodeCnt + 1]; // 이 메소드에서만 쓰일 최단거리 테이블을 만든다.
 		for (int i = 0; i <= nodeCnt; i++)
 			distance[i] = INF;
 
